@@ -80,7 +80,7 @@ $register_ids(LevelBrowserLayer) {
         pageMenu->setContentSize({ 40.f, 110.f });
         pageMenu->setAnchorPoint({ 1.f, .5f });
         pageMenu->setPosition(
-            winSize.width - 10 GEODE_IOS(- geode::utils::getSafeAreaRect().x),
+            winSize.width - 10 GEODE_IOS(- geode::utils::getSafeAreaRect().getMinX()),
             pageMenu->getPositionY() - 110.f / 2 + 12.5f
         );
         pageMenu->updateLayout();
@@ -146,7 +146,7 @@ $register_ids(LevelBrowserLayer) {
         );
         menu->setContentSize({ navMenuWidth, 40.f });
         menu->setPositionX(
-            winSize.width - navMenuWidth / 2 - 5.f GEODE_IOS(- geode::utils::getSafeAreaRect().x)
+            winSize.width - navMenuWidth / 2 - 5.f GEODE_IOS(- geode::utils::getSafeAreaRect().getMinX())
         );
         menu->updateLayout();
     }
@@ -197,7 +197,7 @@ $register_ids(LevelBrowserLayer) {
                             menu->setContentSize({ 50.f, 125.f });
                             #ifdef GEODE_IS_IOS
                             if (menu->getChildrenCount() > 1) {
-                                menu->setPositionX(menu->getContentWidth() / 2 + 5 + geode::utils::getSafeAreaRect().x)
+                                menu->setPositionX(menu->getContentWidth() / 2 + 5 + geode::utils::getSafeAreaRect().getMinX())
                             }
                             #endif
                             menu->setPositionY(
@@ -219,7 +219,7 @@ $register_ids(LevelBrowserLayer) {
 
                     #ifdef GEODE_IS_IOS
                     if (menu->getChildrenCount() > 2) {
-                        menu->setPositionX(winSize.width - menu->getContentWidth() / 2 - 5 - geode::utils::getSafeAreaRect().x)
+                        menu->setPositionX(winSize.width - menu->getContentWidth() / 2 - 5 - geode::utils::getSafeAreaRect().getMinX())
                     }
                     #endif
 

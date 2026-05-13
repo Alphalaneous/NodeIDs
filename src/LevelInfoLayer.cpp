@@ -111,7 +111,7 @@ $register_ids(LevelInfoLayer) {
         }
 
         auto leftSideMenu = CCMenu::create();
-        leftSideMenu->setPosition(30.f GEODE_IOS(+ geode::utils::getSafeAreaRect().x), winSize.height / 2);
+        leftSideMenu->setPosition(30.f GEODE_IOS(+ geode::utils::getSafeAreaRect().getMinX()), winSize.height / 2);
         leftSideMenu->setLayout(ColumnLayout::create());
         leftSideMenu->setID("left-side-menu");
         leftSideMenu->setContentSize({ 50.f, 145.f });
@@ -139,7 +139,7 @@ $register_ids(LevelInfoLayer) {
 
         menu->setContentSize({ 60.f, winSize.height - 15.f });
         menu->setPosition(
-            winSize.width - 30 GEODE_IOS(- geode::utils::getSafeAreaRect().x),
+            winSize.width - 30 GEODE_IOS(- geode::utils::getSafeAreaRect().getMinX()),
             winSize.height / 2
         );
         menu->setLayout(
