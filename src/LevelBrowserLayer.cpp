@@ -197,7 +197,7 @@ $register_ids(LevelBrowserLayer) {
                             menu->setContentSize({ 50.f, 125.f });
                             #ifdef GEODE_IS_IOS
                             if (menu->getChildrenCount() > 1) {
-                                menu->setPositionX(menu->getContentWidth() / 2 + 5 + geode::utils::getSafeAreaRect().getMinX())
+                                menu->setPositionX(menu->getContentWidth() / 2 + 5 + geode::utils::getSafeAreaRect().getMinX());
                             }
                             #endif
                             menu->setPositionY(
@@ -219,7 +219,7 @@ $register_ids(LevelBrowserLayer) {
 
                     #ifdef GEODE_IS_IOS
                     if (menu->getChildrenCount() > 2) {
-                        menu->setPositionX(winSize.width - menu->getContentWidth() / 2 - 5 - geode::utils::getSafeAreaRect().getMinX())
+                        menu->setPositionX(winSize.width - menu->getContentWidth() / 2 - 5 - geode::utils::getSafeAreaRect().getMinX());
                     }
                     #endif
 
